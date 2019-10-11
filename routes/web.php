@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cep/{id}', 'CepServiceController@index');
+Route::resource('clients','ClientsController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
